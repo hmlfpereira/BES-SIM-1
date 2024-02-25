@@ -59,7 +59,8 @@ Download the datasets from the EBV Data Portal:
 |64 | Global trends in ecosystem services (BES-SIM GLOBIO-ES)| https://doi.org/10.25829/vqd4s4 |
 
 ### LUH2
-Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml
+Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml.
+
 Data used for the historical maps: LUH2 v2h Release (10/14/16), file:  
 - states.nc  
 
