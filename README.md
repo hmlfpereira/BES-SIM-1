@@ -35,10 +35,12 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 |BES-SIM_statistics_global.R | Calculate global statistics per IPBES region for all netCDFs|
 |BES-SIM_statistics_ipbes-regions.R | Calculate zonal statistics per IPBES region for all netCDFs|
 
-## The geo data are available in the following repositories
+## Data sources - Tabular data and IPBES regions
+All tabular data from the biodiversity and ecosystem service model outputs are available in the folder Data_tables. See README files on that folder for the metadata.
+In addition a shapefile with the IPBES regions is available in the folder IPBES_Regions.
 
-### Climate_data
-Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
+## Data sources - Geo data
+The geo data can be download from the following repositories.
 
 ### Biodiversity and ecosystem services models map outputs 
 Download the datasets from the EBV Data Portal:
@@ -59,11 +61,14 @@ Download the datasets from the EBV Data Portal:
 ### LUH2
 Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml
 Data used for the historical maps: LUH2 v2h Release (10/14/16), file:  
-|	states.nc  
+*	states.nc  
 Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:  
-|	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
-|	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
-|	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
+*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
+*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
+*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
+
+### Climate_data
+Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
 
 ### ne_110m_land
 Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/  
@@ -81,7 +86,7 @@ All paths in the codes are relative. Place all spatial data in 'Data_geo' and al
 	├───*your-folder-name, eg. "BES_SIM_1"*
 	│ 	├───Code
 	│ 	├───Data_tables
-	|	├───IPBES_Regions
+	|	  ├───IPBES_Regions
 	│ 	├───Figures
 	│ 	├───Outputs
 	*
