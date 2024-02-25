@@ -1,5 +1,5 @@
 # BES SIM 1
-This repository contains all scripts used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.** in the Code folder. It also has all the tabular data used used in the paper (Data_Tables), the IPBES regions shapefile (IPBES_regions), and links to the model maps outputs and other geo data (see below).
+This repository contains all scripts and data used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.**
 
 This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Services Scenario Inter-model Comparison).
 
@@ -13,7 +13,7 @@ Version 1.0, 25.4.2024
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-## Code overview
+## Code folder
 | Filename   | Description  |
 | ---  | ---  |
 |Figure1_and_S3.R | Create input data and plots for global biodiversity metrics |
@@ -38,12 +38,14 @@ The files are here for documentation as the outputs are already stored in the fi
 |BES-SIM_statistics_global.R | Calculate global statistics per IPBES region for all netCDFs|
 |BES-SIM_statistics_ipbes-regions.R | Calculate zonal statistics per IPBES region for all netCDFs|
 
-## Data sources - Tabular data and IPBES regions
-All tabular data from the biodiversity and ecosystem service model outputs are available in the folder Data_tables. See README files on that folder for the metadata.
-In addition a shapefile with the IPBES regions is available in the folder IPBES_Regions.
+## Data_tables folder 
+All tabular data from the biodiversity and ecosystem service model outputs are available. See README files on that folder for the metadata.
 
-## Data sources - Geo data
-The geo data can be download from the following repositories.
+## IPBES_regions folder
+A shapefile with the IPBES regions is available.
+
+## Other spatial data
+The remaining data can be downloaded from the following repositories.
 
 ### Biodiversity and ecosystem services models map outputs 
 Download the datasets from the EBV Data Portal:
@@ -61,7 +63,7 @@ Download the datasets from the EBV Data Portal:
 |63 | Global trends in ecosystem services (BES-SIM InVEST)| https://doi.org/10.25829/zr4d27 |
 |64 | Global trends in ecosystem services (BES-SIM GLOBIO-ES)| https://doi.org/10.25829/vqd4s4 |
 
-### LUH2
+### Land-use data
 Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml.
 
 Data used for the historical maps: LUH2 v2h Release (10/14/16), file:  
@@ -72,11 +74,11 @@ Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:
 - multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
 - multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
 
-### Climate_data
+### Climate data
 Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
 
-### ne_110m_land
-Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/  
+### Global land map
+Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/  (ne_110m_land)
 Version: 4.1.0 (The interface says Version 4.0.0 but the version information in the download files says 4.1.0 -> check both)
 
 ## Folder structure for code and data
