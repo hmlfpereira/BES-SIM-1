@@ -4,8 +4,8 @@ This repository contains all scripts used for analysis and figures for Pereira e
 ## Authors
 Henrique Pereira, Luise Quoß, Inês Martins
 
-##Code Overview:
-	Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics  
+##Code Overview
+Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics  
 	Figure2.R                          	- Create BD maps (species richness) per scenario, averaged over several models  
 	Figure3.R                         	- Create input data and plots for global ecosystem service metrics  
 	Figure4.R                          	- Create Input data and Map with regional plots for ES and BD  
