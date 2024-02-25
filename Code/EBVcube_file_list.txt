@@ -1,0 +1,12 @@
+ID, Title, DOI
+27, Global trends in biodiversity (BES-SIM GLOBIO), https://doi.org/10.25829/r7bt92
+28, Global trends in biodiversity (BES-SIM PREDICS), https://doi.org/10.25829/vt7qk9
+29, Global trends in biodiversity (BES-SIM cSAR-IIASA), https://doi.org/10.25829/haq7d4 
+30, Global trends in biodiversity (BES-SIM cSAR-iDiv), https://doi.org/10.25829/5zmy41 
+31, Global trends in biodiversity (BES-SIM AIM), https://doi.org/10.25829/5wn357
+68, Global trends in biodiversity (BES-SIM INSIGHTS) , https://doi.org/10.25829/h2evr2
+60, Global trends in ecosystem services (BES-SIM LPJ-GUESS), https://doi.org/10.25829/z5v9t2
+61, Global trends in ecosystem services (BES-SIM LPJ), https://doi.org/10.25829/xq7a86  
+62, Global trends in ecosystem services (BES-SIM CABLE POP), https://doi.org/10.25829/ktnb68  
+63, Global trends in ecosystem services (BES-SIM InVEST), https://doi.org/10.25829/zr4d27 
+64, Global trends in ecosystem services (BES-SIM GLOBIO-ES), https://doi.org/10.25829/vqd4s4 
