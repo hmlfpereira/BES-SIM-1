@@ -13,6 +13,7 @@ rm(list=ls())
 library(terra)
 library(ggplot2)
 library(rstudioapi)
+library(viridis)
 
 #setting working directory to the current file source location 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  #only works R studio
