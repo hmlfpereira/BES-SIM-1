@@ -1,8 +1,10 @@
-###This folder contains all scripts used for analysis and figures for Pereira et al. (2024). 
-###Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science. 
-###Project BES SIM 1.
+# BES SIM 1
+This repository contains all scripts used for analysis and figures for Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science. 
 
-###Code Overview:
+## Authors
+Henrique Pereira, Luise Quoß, Inês Martins
+
+##Code Overview:
 	Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics
 	Figure2.R                          	- Create BD maps (species richness) per scenario, averaged over several models	
 	Figure3.R                         	- Create input data and plots for global ecosystem service metrics
@@ -18,11 +20,12 @@
 	FigureS8.R                         	- Create BE maps (local species richness) per model for the regional rivalry scenario
 	FigureS9.R                         	- Create BE maps per scenario for the AIM model
 	FigureS10-S14.R				- Create ES maps per scenario, some per model, some averaged over several models
+
 ##Auxiliary files (outputs are already stored in DataS1 and DataS2 files)
 	BES-SIM_statistics_global.R		- Calculate global statistics per IPBES region for all netCDFs
 	BES-SIM_statistics_ipbes-regions.R	- Calculate zonal statistics per IPBES region for all netCDFs
 
-### The data are available in the following repositories:
+## The data are available in the following repositories:
 
 ## Climate_data
 Download the data from this Dryad repository: https://doi.org/10.5061/dryad.3n5tb2rr6
@@ -73,7 +76,7 @@ Path info:
 	│ 	├───Outputs
 	*
 
-
+## Session Info for R (lists Session Info for machine that ran the code)
 Session Info of the R- and package-version(s):
 	R version 4.3.2 (2023-10-31)
 	Platform: x86_64-apple-darwin20 (64-bit)
