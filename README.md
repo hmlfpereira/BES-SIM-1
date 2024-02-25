@@ -5,21 +5,21 @@ This repository contains all scripts used for analysis and figures for Pereira e
 Henrique Pereira, Luise Quoß, Inês Martins
 
 ##Code Overview:
-	Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics
-	Figure2.R                          	- Create BD maps (species richness) per scenario, averaged over several models	
-	Figure3.R                         	- Create input data and plots for global ecosystem service metrics
-	Figure4.R                          	- Create Input data and Map with regional plots for ES and BD
-	FigureS1.R                        	- Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050)	
-	FigureS2.R                        	- Create distribution maps of primary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario
-	FigureS3.R                       	- Create distribution maps of secondary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario
-	FigureS4.R                        	- Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario	
-	FigureS5.R                        	- Create distribution maps of pasture and rangeland in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario
+	Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics  
+	Figure2.R                          	- Create BD maps (species richness) per scenario, averaged over several models  
+	Figure3.R                         	- Create input data and plots for global ecosystem service metrics  
+	Figure4.R                          	- Create Input data and Map with regional plots for ES and BD  
+	FigureS1.R                        	- Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050)  
+	FigureS2.R                        	- Create distribution maps of primary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
+	FigureS3.R                       	- Create distribution maps of secondary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
+	FigureS4.R                        	- Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  	
+	FigureS5.R                        	- Create distribution maps of pasture and rangeland in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
 	FigureS6.R                         	- Create S2a: Global historical trends (1990-2015) in mean annual temperature and for each scenario (2015-2050) and 
-						  create S2b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)
-	FigureS7.R                        	- Create BD maps (intactness) per scenario, averaged over several models
-	FigureS8.R                         	- Create BE maps (local species richness) per model for the regional rivalry scenario
-	FigureS9.R                         	- Create BE maps per scenario for the AIM model
-	FigureS10-S14.R				- Create ES maps per scenario, some per model, some averaged over several models
+						  create S2b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)  
+	FigureS7.R                        	- Create BD maps (intactness) per scenario, averaged over several models  
+	FigureS8.R                         	- Create BE maps (local species richness) per model for the regional rivalry scenario  
+	FigureS9.R                         	- Create BE maps per scenario for the AIM model  
+	FigureS10-S14.R				- Create ES maps per scenario, some per model, some averaged over several models  
 
 ##Auxiliary files (outputs are already stored in DataS1 and DataS2 files)
 	BES-SIM_statistics_global.R		- Calculate global statistics per IPBES region for all netCDFs
