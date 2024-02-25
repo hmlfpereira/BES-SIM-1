@@ -30,7 +30,7 @@ root_tables<-"../Data_Tables/"
 #DataS1_Biodiversity.xlsx
 #DataS2_EcosystemServices.xlsx
 
-root_IPBES_Regions<-"../../Data_Geo/IPBES_Regions"
+root_IPBES_Regions<-"../IPBES_Regions"
 #directory with shapefile of IPBES regions from DataS4
 
 root_figures <- '../Figures/'
@@ -62,7 +62,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
   )
   
   # Rename the "mean" column    
-  datac <- rename(datac, c("mean" = measurevar))
+  datac <- rename(datac, !!measurevar := mean)
   
   datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
   
@@ -78,14 +78,14 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
 
 #### 2 - Import data ----
 
-all_data<-read_csv(file.path(root_tables,"EcosystemServices_regional.csv"))
-all_data_global<-read_csv(file.path(root_tables,"EcosystemServices_global.csv"))
+all_data<-read.csv(file.path(root_tables,"EcosystemServices_regional.csv"))
+all_data_global<-read.csv(file.path(root_tables,"EcosystemServices_global.csv"))
 #all_data_global<-all_data_global[,1:9]
 all_data<-rbind(all_data,all_data_global)
 all_data <- dplyr::rename(all_data, Sum = Value)
 
-all_data_bio <- read_csv(file.path(root_tables,"Biodiversity_regional.csv"))
-all_data_bio_global <- read_csv(file.path(root_tables,"Biodiversity_global.csv"))
+all_data_bio <- read.csv(file.path(root_tables,"Biodiversity_regional.csv"))
+all_data_bio_global <- read.csv(file.path(root_tables,"Biodiversity_global.csv"))
 all_data_bio_global <- all_data_bio_global[,1:11]  #last column of bio_global is not needed
 all_data_bio_global <- subset(all_data_bio_global,LUCC=="LUCC")
 all_data_bio <- rbind(all_data_bio [, 1:11], all_data_bio_global)

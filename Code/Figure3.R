@@ -79,7 +79,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
 
 ### 2 - Import data ----
 
-all_data<-read_csv(file.path(root_tables,"EcosystemServices_global.csv"))
+all_data<-read.csv(file.path(root_tables,"EcosystemServices_global.csv"))
 
 ### 3 - Subset and recode data ----
 

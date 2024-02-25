@@ -26,7 +26,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  #only works R studi
 root <- '../../Data_geo/ebv_cubes'
 #directory with biodiversity model outputs as ebvcubes (they are downloaded below)
 
-root_IPBES_Regions<-"../../Data_Geo/IPBES_Regions"
+root_IPBES_Regions<-"../IPBES_Regions"
 #directory with shapefile of IPBES regions from DataS4
 
 root_outputs<-"../Outputs/"

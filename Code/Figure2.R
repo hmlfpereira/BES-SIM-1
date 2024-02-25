@@ -31,7 +31,7 @@ land_path <- '../../Data_geo/ne_110m_land/ne_110m_land.shp'
 root_figures <- '../Figures/'
 #directory where figure outputs will be saved
 
-root_IPBES_Regions<-"../../Data_Geo/IPBES_Regions"
+root_IPBES_Regions<-"../IPBES_Regions"
 #directory with shapefile of IPBES regions from DataS4
 
 root_outputs<-"../Outputs/"
