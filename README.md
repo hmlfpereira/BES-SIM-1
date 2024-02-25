@@ -8,6 +8,7 @@ Henrique M. Pereira, Luise Quoß, Inês Martins
 
 ## Version history
 Version 1.0, 25.4.2024
+DOI: 10.5281/zenodo.10703117
 
 ## Licence
 This work is licensed under the Creative Commons Attribution 4.0 International License.
