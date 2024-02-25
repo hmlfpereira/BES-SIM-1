@@ -1,16 +1,23 @@
 # BES SIM 1
-This repository contains all scripts used for analysis and figures for Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science. 
+This repository contains all scripts used for analysis and figures for *Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.* 
 
 ## Authors
-Henrique Pereira, Luise Quoß, Inês Martins
+Henrique M. Pereira, Luise Quoß, Inês Martins
+
+## Version history
+Version 1.0, 25.4.2024
+
+## Licence
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## Code overview
 | Filename   | Description  |
-| ---    | ---  |
+| ---  | ---  |
 |Figure1_and_S3.R | Create input data and plots for global biodiversity metrics |
-|Figure2.R | Create BD maps (species richness) per scenario, averaged over several models |
-|Figure3.R  | Create input data and plots for global ecosystem service metrics |
-|Figure4.R  | Create Input data and Map with regional plots for ES and BD |
+|Figure2.R   | Create BD maps (species richness) per scenario, averaged over several models |
+|Figure3.R   | Create input data and plots for global ecosystem service metrics |
+|Figure4.R   | Create Input data and Map with regional plots for ES and BD |
 |FigureS1.R  | Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050) |
 |FigureS2.R  | Create distribution maps of primary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |
 |FigureS3.R  | Create distribution maps of secondary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |  
@@ -51,12 +58,12 @@ Download the datasets from the EBV Data Portal:
 
 ### LUH2
 Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml
-Data used for the historical maps: LUH2 v2h Release (10/14/16), file:
-	states.nc
-Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:
-	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc
-	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc
-	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc
+Data used for the historical maps: LUH2 v2h Release (10/14/16), file:  
+	states.nc  
+Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:  
+	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
+	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
+	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
 
 ### ne_110m_land
 Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/
