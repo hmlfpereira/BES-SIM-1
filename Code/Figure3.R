@@ -15,7 +15,6 @@ library(ggplot2)
 library(dplyr)
 library(Rmisc)
 library(ggpubr)
-library(readxl)
 library(ggpattern)
 library(rlang)
 
@@ -80,7 +79,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
 
 ### 2 - Import data ----
 
-all_data<-read_excel(file.path(root_tables,"DataS2_EcosystemServices.xlsx"),sheet=1, na="NA")
+all_data<-read_csv(file.path(root_tables,"EcosystemServices_global.csv"))
 
 ### 3 - Subset and recode data ----
 

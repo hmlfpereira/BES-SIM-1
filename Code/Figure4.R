@@ -17,7 +17,6 @@ library(sf)
 library(plyr)
 library(purrr)
 library(igraph)
-library(readxl)
 library(readr)
 library(raster)
 
@@ -79,14 +78,14 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
 
 #### 2 - Import data ----
 
-all_data<-read_excel(file.path(root_tables,"DataS2_EcosystemServices.xlsx"),sheet=2, na="NA")
-all_data_global<-read_excel(file.path(root_tables,"DataS2_EcosystemServices.xlsx"),sheet=1, na="NA")
+all_data<-read_csv(file.path(root_tables,"EcosystemServices_regional.csv"))
+all_data_global<-read_csv(file.path(root_tables,"EcosystemServices_global.csv"))
 #all_data_global<-all_data_global[,1:9]
 all_data<-rbind(all_data,all_data_global)
 all_data <- dplyr::rename(all_data, Sum = Value)
 
-all_data_bio <- read_excel(file.path(root_tables,"DataS1_Biodiversity.xlsx"),sheet=2, na="NA")
-all_data_bio_global <- read_excel(file.path(root_tables,"DataS1_Biodiversity.xlsx"),sheet=1, na="NA")
+all_data_bio <- read_csv(file.path(root_tables,"Biodiversity_regional.csv"))
+all_data_bio_global <- read_csv(file.path(root_tables,"Biodiversity_global.csv"))
 all_data_bio_global <- all_data_bio_global[,1:11]  #last column of bio_global is not needed
 all_data_bio_global <- subset(all_data_bio_global,LUCC=="LUCC")
 all_data_bio <- rbind(all_data_bio [, 1:11], all_data_bio_global)

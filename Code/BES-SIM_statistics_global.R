@@ -13,7 +13,6 @@
 rm(list=ls())
 
 #libraries
-library(readxl)
 library(stringr)
 library(dplyr)
 library(ebvcube)
