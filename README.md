@@ -61,11 +61,12 @@ Download the datasets from the EBV Data Portal:
 ### LUH2
 Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml
 Data used for the historical maps: LUH2 v2h Release (10/14/16), file:  
-*	states.nc  
+- states.nc  
+
 Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:  
-*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
-*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
-*multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
 
 ### Climate_data
 Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
