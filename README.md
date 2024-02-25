@@ -1,5 +1,5 @@
 # BES SIM 1
-This repository contains all scripts used for analysis and figures for **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.**
+This repository contains all scripts used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.** in the Code folder. It also has all the tabular data used used in the paper (Data_Tables), the IPBES regions shapefile (IPBES_regions), and links to the model maps outputs and other geo data (see below).
 
 This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Services Scenario Inter-model Comparison).
 
@@ -31,7 +31,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 |FigureS9.R  | Create BE maps per scenario for the AIM model |
 |FigureS10-S14.R | Create ES maps per scenario, some per model, some averaged over several models |
 
-### Auxiliary files (outputs are already stored in CSV files in Data_tables)
+### Auxiliary files 
+The files are here for documentation as the outputs are already stored in the files in Data_tables.
 | Filename   | Description     |
 | ---    | ---  |
 |BES-SIM_statistics_global.R | Calculate global statistics per IPBES region for all netCDFs|
