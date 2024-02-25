@@ -24,4 +24,5 @@ Figures/
 
 #Files I don't want to sync
 data_geo-readme.txt
-README_code.txt
+README_DropBox.txt
+.Rproj.user
