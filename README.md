@@ -4,49 +4,52 @@ This repository contains all scripts used for analysis and figures for Pereira e
 ## Authors
 Henrique Pereira, Luise Quoß, Inês Martins
 
-##Code Overview
-Figure1_and_S3.R                   	- Create input data and plots for global biodiversity metrics  
-	Figure2.R                          	- Create BD maps (species richness) per scenario, averaged over several models  
-	Figure3.R                         	- Create input data and plots for global ecosystem service metrics  
-	Figure4.R                          	- Create Input data and Map with regional plots for ES and BD  
-	FigureS1.R                        	- Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050)  
-	FigureS2.R                        	- Create distribution maps of primary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
-	FigureS3.R                       	- Create distribution maps of secondary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
-	FigureS4.R                        	- Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  	
-	FigureS5.R                        	- Create distribution maps of pasture and rangeland in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  
-	FigureS6.R                         	- Create S2a: Global historical trends (1990-2015) in mean annual temperature and for each scenario (2015-2050) and 
-						  create S2b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)  
-	FigureS7.R                        	- Create BD maps (intactness) per scenario, averaged over several models  
-	FigureS8.R                         	- Create BE maps (local species richness) per model for the regional rivalry scenario  
-	FigureS9.R                         	- Create BE maps per scenario for the AIM model  
-	FigureS10-S14.R				- Create ES maps per scenario, some per model, some averaged over several models  
+## Code overview
+| Filename   | Description  |
+| ---    | ---  |
+|Figure1_and_S3.R | Create input data and plots for global biodiversity metrics |
+|Figure2.R | Create BD maps (species richness) per scenario, averaged over several models |
+|Figure3.R  | Create input data and plots for global ecosystem service metrics |
+|Figure4.R  | Create Input data and Map with regional plots for ES and BD |
+|FigureS1.R  | Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050) |
+|FigureS2.R  | Create distribution maps of primary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |
+|FigureS3.R  | Create distribution maps of secondary land (forest & non-forest) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |  
+|FigureS4.R  | Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  |
+|FigureS5.R  | Create distribution maps of pasture and rangeland in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |
+|FigureS6.R  | Create S2a: Global historical trends (1990-2015) in mean annual temperature and for each scenario (2015-2050) and create S2b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)| 
+|FigureS7.R  | Create BD maps (intactness) per scenario, averaged over several models | 
+|FigureS8.R  | Create BE maps (local species richness) per model for the regional rivalry scenario | 
+|FigureS9.R  | Create BE maps per scenario for the AIM model |
+|FigureS10-S14.R | Create ES maps per scenario, some per model, some averaged over several models |
 
-##Auxiliary files (outputs are already stored in DataS1 and DataS2 files)
-	BES-SIM_statistics_global.R		- Calculate global statistics per IPBES region for all netCDFs
-	BES-SIM_statistics_ipbes-regions.R	- Calculate zonal statistics per IPBES region for all netCDFs
+### Auxiliary files (outputs are already stored in CSV files in Data_tables)
+| Filename   | Description     |
+| ---    | ---  |
+|BES-SIM_statistics_global.R | Calculate global statistics per IPBES region for all netCDFs|
+|BES-SIM_statistics_ipbes-regions.R | Calculate zonal statistics per IPBES region for all netCDFs|
 
-## The data are available in the following repositories:
+## The geo data are available in the following repositories
 
-## Climate_data
-Download the data from this Dryad repository: https://doi.org/10.5061/dryad.3n5tb2rr6
-(fixed version)
+### Climate_data
+Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
 
-## ebv_cubes
+### Biodiversity and ecosystem services models map outputs 
 Download the datasets from the EBV Data Portal:
-ID, Title, DOI
-27, Global trends in biodiversity (BES-SIM GLOBIO), https://doi.org/10.25829/r7bt92
-28, Global trends in biodiversity (BES-SIM PREDICS), https://doi.org/10.25829/vt7qk9
-29, Global trends in biodiversity (BES-SIM cSAR-IIASA), https://doi.org/10.25829/haq7d4 
-30, Global trends in biodiversity (BES-SIM cSAR-iDiv), https://doi.org/10.25829/5zmy41 
-31, Global trends in biodiversity (BES-SIM AIM), https://doi.org/10.25829/5wn357
-68, Global trends in biodiversity (BES-SIM INSIGHTS) , https://doi.org/10.25829/h2evr2
-60, Global trends in ecosystem services (BES-SIM LPJ-GUESS), https://doi.org/10.25829/z5v9t2
-61, Global trends in ecosystem services (BES-SIM LPJ), https://doi.org/10.25829/xq7a86  
-62, Global trends in ecosystem services (BES-SIM CABLE POP), https://doi.org/10.25829/ktnb68  
-63, Global trends in ecosystem services (BES-SIM InVEST), https://doi.org/10.25829/zr4d27 
-64, Global trends in ecosystem services (BES-SIM GLOBIO-ES), https://doi.org/10.25829/vqd4s4 
+| ID  | Title | DOI |
+| ---    | ---  | ---  |
+|27 | Global trends in biodiversity (BES-SIM GLOBIO)| https://doi.org/10.25829/r7bt92 |
+|28 | Global trends in biodiversity (BES-SIM PREDICS)| https://doi.org/10.25829/vt7qk9 |
+|29 | Global trends in biodiversity (BES-SIM cSAR-IIASA)| https://doi.org/10.25829/haq7d4 |
+|30 | Global trends in biodiversity (BES-SIM cSAR-iDiv)| https://doi.org/10.25829/5zmy41 |
+|31 | Global trends in biodiversity (BES-SIM AIM)| https://doi.org/10.25829/5wn357 |
+|68 | Global trends in biodiversity (BES-SIM INSIGHTS) | https://doi.org/10.25829/h2evr2 |
+|60 | Global trends in ecosystem services (BES-SIM LPJ-GUESS)| https://doi.org/10.25829/z5v9t2 |
+|61 | Global trends in ecosystem services (BES-SIM LPJ)| https://doi.org/10.25829/xq7a86 |
+|62 | Global trends in ecosystem services (BES-SIM CABLE POP)| https://doi.org/10.25829/ktnb68 |
+|63 | Global trends in ecosystem services (BES-SIM InVEST)| https://doi.org/10.25829/zr4d27 |
+|64 | Global trends in ecosystem services (BES-SIM GLOBIO-ES)| https://doi.org/10.25829/vqd4s4 |
 
-## LUH2
+### LUH2
 Download the LandUseHarmonization2 from their website: https://luh.umd.edu/data.shtml
 Data used for the historical maps: LUH2 v2h Release (10/14/16), file:
 	states.nc
@@ -55,12 +58,12 @@ Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:
 	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc
 	multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc
 
-## ne_110m_land
+### ne_110m_land
 Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/
 Version: 4.1.0 (The interface says Version 4.0.0 but the version information in the download files says 4.1.0 -> check both)
 
-Path info:
-	All paths in the codes are relative. Place all spatial data in 'Data_geo' and all code can be run. The folders need the following names (except *your-folder-name*  which can be named for instance BES_SIM_1) and hierarchical structure:
+## Folder structure for code and data
+All paths in the codes are relative. Place all spatial data in 'Data_geo' and all code can be run. The folders need the following names (except *your-folder-name*  which can be named for instance BES_SIM_1) and hierarchical structure:
 	
 	*
 	├───Data_geo
@@ -76,8 +79,9 @@ Path info:
 	│ 	├───Outputs
 	*
 
-## Session Info for R (lists Session Info for machine that ran the code)
+## Session Info for R 
 Session Info of the R- and package-version(s):
+
 	R version 4.3.2 (2023-10-31)
 	Platform: x86_64-apple-darwin20 (64-bit)
 	Running under: macOS Sonoma 14.2.1
