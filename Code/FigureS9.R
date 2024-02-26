@@ -1,6 +1,6 @@
 ### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
-### Figures S9 ----
-### Create BE maps (local species richness) per model for the regional rivalry scenario
+### Figure S9 ----
+### Create BE maps per scenario for the AIM model
 ### Project BES SIM 1
 ### Created October 2023, Luise Quoß
 ### Revised November 2023, Henrique Pereira
@@ -35,8 +35,8 @@ root_IPBES_Regions<-"../IPBES_Regions"
 root_outputs<-"../Outputs/"
 #directory where other outputs and analysis will be saved
 
-#download data----
-for (id in c(27:31,68)) {
+#download data
+for (id in 31) {
   tryCatch({
     ebv_download(id, root)
   },error = function(e) {
@@ -45,71 +45,50 @@ for (id in c(27:31,68)) {
   })
 }
 
-#list all files
-list.files(root, '*.nc')
-predicts_path <- file.path(root, 'pereira_comcom_id28_20231212_v2.nc')
-iiasa_path <- file.path(root, 'pereira_comcom_id29_20220323_v1.nc')
-csar_path <- file.path(root, 'pereira_comcom_id30_20220321_v1.nc')
 aim_path <- file.path(root, 'pereira_comcom_id31_20220321_v2.nc')
-insight_path <- file.path(root, 'pereira_comcom_id68_20231102_v1.nc' )
 
 ### 2 - Import data ----
-# ebv_datacubepaths(predicts_path)
-predicts <- ebv_read(filepath = predicts_path,
-                          datacubepath = 'scenario_2/metric_3/ebv_cube',
-                          timestep = 3,
-                          entity = 1, type='r')
-# ebv_datacubepaths(iiasa_path)
-iiasa <- ebv_read(filepath = iiasa_path,
-                     datacubepath = 'scenario_2/metric_3/ebv_cube',
-                     timestep = 3,
-                     entity = 1, type='r')
-# ebv_datacubepaths(csar_path)
-csar <- ebv_read(filepath = csar_path,
-                  datacubepath = 'scenario_2/metric_3/ebv_cube',
-                  timestep = 3,
-                  entity = 1, type='r')
 # ebv_datacubepaths(aim_path)
-aim <- ebv_read(filepath = aim_path,
-                  datacubepath = 'scenario_2/metric_3/ebv_cube',
-                  timestep = 3,
-                  entity = 2, type='r')
-# ebv_datacubepaths(insight_path)
-insight <- ebv_read(filepath = insight_path,
-                datacubepath = 'scenario_2/metric_3/ebv_cube',
-                timestep = 3,
-                entity = 1, type='r')
+aim_s_lucc <- ebv_read(filepath = aim_path,
+                     datacubepath = 'scenario_6/metric_2/ebv_cube',
+                     timestep = 3,
+                     entity = 2, type='r')
+aim_ss_lucc <- ebv_read(filepath = aim_path,
+                      datacubepath = 'scenario_6/metric_3/ebv_cube',
+                      timestep = 3,
+                      entity = 2, type='r')
+aim_s_lucc_fd <- ebv_read(filepath = aim_path,
+                       datacubepath = 'scenario_6/metric_2/ebv_cube',
+                       timestep = 3,
+                       entity = 1, type='r')
+aim_ss_lucc_fd <- ebv_read(filepath = aim_path,
+                        datacubepath = 'scenario_6/metric_3/ebv_cube',
+                        timestep = 3,
+                        entity = 1, type='r')
 
 ### 3 - Calculations ----
-aim_ext <- terra::extend(aim,predicts)
-predicts_yrl <-  (((1+(predicts/100))^(1/3.5))-1)*100
-iiasa_yrl <- (((1+(iiasa/100))^(1/3.5))-1)*100  
-csar_yrl <-(((1+(csar/100))^(1/3.5))-1)*100    
-aim_yrl <- (((1+(aim_ext/100))^(1/3.5))-1)*100
-insight_yrl <- (((1+(insight/100))^(1/3.5))-1)*100 
-stack <- c(predicts_yrl, iiasa_yrl, csar_yrl, aim_yrl,insight_yrl)
-model_mean <- app(stack, mean, na.rm=T)
+aim_s_lucc_yrl <- (((1+(aim_s_lucc/100))^(1/3.5))-1)*100
+aim_ss_lucc_yrl <- (((1+(aim_ss_lucc/100))^(1/3.5))-1)*100 
+aim_s_lucc_fd_yrl <-(((1+(aim_s_lucc_fd/100))^(1/3.5))-1)*100  
+aim_ss_lucc_fd_yrl <- (((1+(aim_ss_lucc_fd/100))^(1/3.5))-1)*100
 
 ### 4 - Plots ----
-#prepare background
-land_vec <- terra::vect(land_path)
-mask <- terra::rasterize(land_vec, predicts)
-mask <- terra::crop(mask, ext(c(-180,180,-58,90)))
-
 #create colors
-all <- c(as.array(predicts_yrl), as.array(iiasa_yrl), as.array(insight_yrl),
-         as.array(csar_yrl), as.array(aim_yrl), as.array(model_mean))
+all <- c(as.array(aim_s_lucc_yrl), as.array(aim_ss_lucc_yrl),
+         as.array(aim_s_lucc_fd_yrl), as.array(aim_ss_lucc_fd_yrl))
 all <- as.data.frame(all)
 all <- na.omit(all)
 q <- classIntervals(all$all, 20, style="quantile")$brks 
-q <- unique(q)
+q <- c(q[1:15], 0, q[16:21])
 
-br <- c(q[1], q[3], q[5], q[7], q[10],q[12],q[14], q[16])
-br_at <- c(0.5, 2.5, 4.5, 6.5, 9.5, 11.5, 13.5, 15.5)
 
-co1 <- colorRampPalette(c("brown2","#FBD3AF"))(9)
+br <- c(q[2], q[5],  q[9], q[13], q[16], q[19], q[length(q)-1])
+br_at <- c(1.5, 4.5, 8.5, 12.5, 15.5, 18.5, 20.5)
+
+co1 <- colorRampPalette(c("brown2","#FBD3AF"))(14)
+co3 <- colorRampPalette(c("#FBD3AF","lemonchiffon1"))(3)
 co2 <- colorRampPalette(c('lemonchiffon1', "cornflowerblue"))(6)
-co <- c(co1,co2)
+co <- c(co1,co3[2], co2)
 
 #legend
 {
@@ -120,116 +99,65 @@ co <- c(co1,co2)
   title(main = expression("% spp. decade"^{-1}), font.main = 1, cex.main=1.5, adj=0) #
 }
 
-dev.copy(pdf,file.path(root_figures, 'FigureS9_legend_acc_decade.pdf'),
-         width=20,height=3)
+dev.copy(pdf,file.path(root_figures, 'FigureS10_legend_decade.pdf'),
+         width=15,height=2.5)
 dev.off()
 
 #split screen
-split.screen(c(3, 1))       # split display into two screens
-split.screen(c(1, 2), screen = 1) # now split the middle one into 3
-split.screen(c(1, 2), screen = 2) # now split the bottom one into 3
-split.screen(c(1, 2), screen = 3) # now split the bottom one into 3
+split.screen(c(2, 1))       # split display into two screens
+split.screen(c(1, 2), screen = 1) # now split the upper one into 2
+split.screen(c(1, 2), screen = 2) # now split the lower one into 2
 
-#### a) map csar ----
+#map s
+screen(3)
+plot(
+  aim_s_lucc_yrl,
+  breaks = q,
+  col = co,
+  main = expression(paste('(a) ', Delta,'S',alpha,' - No dispersal')),
+  legend = F,
+  axes= F
+)
+
+#map ss
 screen(4)
-plot(mask, legend = F,
-     main = '(a) cSAR-iDiv',
-     axes= F,
-     col='grey93')
-
 plot(
-  csar_yrl,
+  aim_ss_lucc_yrl,
   breaks = q,
-  add = T,
+  main = expression(paste('(b) ', Delta,'SS',alpha,' - No dispersal')),
   col = co,
   legend = F,
   axes= F
 )
 
-#### b) map iiasa ----
+#map s fd
 screen(5)
-plot(mask, legend = F,
-     main = '(b) cSAR-IIASA-ETH',
-     axes= F,
-     col='grey93')
-
 plot(
-  iiasa_yrl,
+  aim_s_lucc_fd_yrl,
   breaks = q,
-  add = T,
+  main = expression(paste('(c) ', Delta,'S',alpha,' - Full dispersal')),
   col = co,
   legend = F,
   axes= F
 )
 
-#### c) map insights ----
+#map ss fd
 screen(6)
-plot(mask, legend = F,
-     main = '(c) InSIGHTS',
-     axes= F,
-     col='grey93')
-
 plot(
-  insight_yrl,
+  aim_ss_lucc_fd_yrl,
   breaks = q,
-  add = T,
+  main = expression(paste('(d) ', Delta,'SS',alpha,' - Full dispersal')),
   col = co,
   legend = F,
   axes= F
 )
 
-#### d) map aim ----
-screen(7)
-plot(mask, legend = F,
-     main = '(d) AIM',
-     axes= F,
-     col='grey93')
-
-plot(
-  aim_yrl,
-  breaks = q,
-  add = T,
-  col = co,
-  legend = F,
-  axes= F
-)
-
-#### e) map predicts ----
-screen(8)
-plot(mask, legend = F,
-     main = '(e) PREDICTS',
-     axes= F,
-     col='grey93')
-
-plot(
-  predicts_yrl,
-  breaks = q,
-  add = T,
-  col = co,
-  legend = F,
-  axes= F
-)
-
-#### f) map intermodel mean ----
-screen(9)
-plot(mask, legend = F,
-     main = '(f) Intermodel mean',
-     axes= F,
-     col='grey93')
-
-plot(
-  model_mean,
-  breaks = q,
-  add = T,
-  col = co,
-  legend = F,
-  axes= F
-)
+close.screen(all = TRUE)
 
 #save as file
-dev.copy(pdf,file.path(root_figures, 'FigureS9_BiodivModelAgreement.pdf'),
+dev.copy(pdf,file.path(root_figures, 'FigureS9_AIM_model.pdf'),
          width=13,height=10)
 dev.off()
 
-#close all screens
-close.screen(all = TRUE)
+
+

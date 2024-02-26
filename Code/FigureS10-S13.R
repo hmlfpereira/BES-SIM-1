@@ -42,7 +42,7 @@ for (id in 60:64) {
     ebv_download(id, root)
   },error = function(e) {
     if(stringr::str_detect(as.character(e),'NetCDF already downloaded'))
-    print(paste0('NetCDF with id ',id,' already downloaded'))
+      print(paste0('NetCDF with id ',id,' already downloaded'))
   })
 }
 
@@ -60,15 +60,15 @@ geomchange<-function(deltay,deltatime)
   ((1+deltay/100)^(1/deltatime)-1)*100
 }
 
-#maps for figure S11-----
+#maps for figure S10-----
 #### a) - Import data ----
 
 #read data from lpj-guess
 # ebv_datacubepaths(lpj_guess_path)
 lpj_guess_carb_s1 <- ebv_read(filepath = lpj_guess_path,
-                           datacubepath = 'scenario_1/metric_3/ebv_cube',
-                           entity = 1, type='r',
-                           timestep=3)
+                              datacubepath = 'scenario_1/metric_3/ebv_cube',
+                              entity = 1, type='r',
+                              timestep=3)
 lpj_guess_carb_s2 <- ebv_read(filepath = lpj_guess_path,
                               datacubepath = 'scenario_2/metric_3/ebv_cube',
                               entity = 1, type='r',
@@ -81,45 +81,45 @@ lpj_guess_carb_s3 <- ebv_read(filepath = lpj_guess_path,
 #read data from lpj
 # ebv_datacubepaths(lpj_path)
 lpj_carb_s1 <- ebv_read(filepath = lpj_path,
-                              datacubepath = 'scenario_1/metric_1/ebv_cube',
-                              entity = 1, type='r',
-                              timestep=3)
+                        datacubepath = 'scenario_1/metric_1/ebv_cube',
+                        entity = 1, type='r',
+                        timestep=3)
 lpj_carb_s2 <- ebv_read(filepath = lpj_path,
-                              datacubepath = 'scenario_2/metric_1/ebv_cube',
-                              entity = 1, type='r',
-                              timestep=3)
+                        datacubepath = 'scenario_2/metric_1/ebv_cube',
+                        entity = 1, type='r',
+                        timestep=3)
 lpj_carb_s3 <- ebv_read(filepath = lpj_path,
-                              datacubepath = 'scenario_3/metric_1/ebv_cube',
-                              entity = 1, type='r',
-                              timestep=3)
+                        datacubepath = 'scenario_3/metric_1/ebv_cube',
+                        entity = 1, type='r',
+                        timestep=3)
 
 #read data from cable
 # ebv_datacubepaths(cable_path)
 cable_carb_s1 <- ebv_read(filepath = cable_path,
-                        datacubepath = 'scenario_1/metric_1/ebv_cube',
-                        entity = 1, type='r',
-                        timestep=2)
+                          datacubepath = 'scenario_1/metric_1/ebv_cube',
+                          entity = 1, type='r',
+                          timestep=2)
 cable_carb_s2 <- ebv_read(filepath = cable_path,
-                        datacubepath = 'scenario_2/metric_1/ebv_cube',
-                        entity = 1, type='r',
-                        timestep=2)
+                          datacubepath = 'scenario_2/metric_1/ebv_cube',
+                          entity = 1, type='r',
+                          timestep=2)
 cable_carb_s3 <- ebv_read(filepath = cable_path,
-                        datacubepath = 'scenario_3/metric_1/ebv_cube',
-                        entity = 1, type='r',
-                        timestep=2)
+                          datacubepath = 'scenario_3/metric_1/ebv_cube',
+                          entity = 1, type='r',
+                          timestep=2)
 
 #read data from globio
 # ebv_datacubepaths(globio_path)
 
 globio_carb_s1 <- ebv_read(filepath = globio_path,
-                        datacubepath = 'scenario_1/metric_5/ebv_cube',
-                        entity = 1, type='r')
+                           datacubepath = 'scenario_1/metric_5/ebv_cube',
+                           entity = 1, type='r')
 globio_carb_s2 <- ebv_read(filepath = globio_path,
-                        datacubepath = 'scenario_2/metric_5/ebv_cube',
-                        entity = 1, type='r')
+                           datacubepath = 'scenario_2/metric_5/ebv_cube',
+                           entity = 1, type='r')
 globio_carb_s3 <- ebv_read(filepath = globio_path,
-                        datacubepath = 'scenario_3/metric_5/ebv_cube',
-                        entity = 1, type='r')
+                           datacubepath = 'scenario_3/metric_5/ebv_cube',
+                           entity = 1, type='r')
 
 #### b) - Calculations ----
 #extend the extent of cable rasters - they are smaller
@@ -175,14 +175,14 @@ co <- c(co1,co2)
   box()
   title(main = expression("% decade"^{-1}), font.main = 1, cex.main=2, adj=0)
 }
-dev.copy(pdf,file.path(root_figures, 'FigureS11_legend.pdf'),
+dev.copy(pdf,file.path(root_figures, 'FigureS10_legend.pdf'),
          width=17,height=2.6)
 dev.off()
 
 
 {
   par(mfrow = c(2, 2))
-
+  
   plot(mask, legend = F,
        main = '(a) Global sustainability',
        axes= F,
@@ -195,7 +195,7 @@ dev.off()
     legend = F,
     axes= F
   )
-
+  
   plot(mask, legend = F,
        main = '(b) Regional rivalry',
        axes= F,
@@ -208,7 +208,7 @@ dev.off()
     legend = F,
     axes= F
   )
-
+  
   plot(mask, legend = F,
        main = '(c) Fossil-fueled develop.',
        axes= F,
@@ -224,7 +224,7 @@ dev.off()
 }
 
 #save as file
-dev.copy(pdf,file.path(root_figures, 'FigureS11_Carbon_SSPs.pdf'),
+dev.copy(pdf,file.path(root_figures, 'FigureS10_Carbon_SSPs.pdf'),
          width=13,height=10)
 dev.off()
 
@@ -280,7 +280,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(b) GLOBIO-ES',
        axes= F,
        col='grey93')
@@ -290,7 +290,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(c) LPJ',
        axes= F,
        col='grey93')
@@ -300,7 +300,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(d) LPJ-GUESS',
        axes= F,
        col='grey93')
@@ -323,8 +323,8 @@ gc()
 #maps for figure S13----
 #### a) - Import data ----
 cable_wood_s3 <- ebv_read(filepath = cable_path,
-                           datacubepath = 'scenario_3/metric_2/ebv_cube',
-                           entity = 1, type='r',
+                          datacubepath = 'scenario_3/metric_2/ebv_cube',
+                          entity = 1, type='r',
                           timestep=2)
 globio_wood_s3 <- ebv_read(filepath = globio_path,
                            datacubepath = 'scenario_3/metric_6/ebv_cube',
@@ -369,7 +369,7 @@ dev.off()
 
 {
   par(mfrow = c(2, 2))
-
+  
   plot(mask, legend = F, main = '(a) CABLE POP',
        axes= F,
        col='grey93')
@@ -379,7 +379,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(b) GLOBIO-ES',
        axes= F,
        col='grey93')
@@ -389,7 +389,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(c) LPJ-GUESS',
        axes= F,
        col='grey93')
@@ -409,7 +409,7 @@ dev.off()
 rm(all)
 gc()
 
-#maps for figure S14----
+#maps for figure S11----
 #### a) - Import data ----
 
 #----carbon (4): lpj-guess, lpj, cable, globio
@@ -436,12 +436,12 @@ ssp5_timber_mean <- app(ssp5_timber, mean, na.rm=T)
 #----pollination (2): invest, globio
 ebv_datacubepaths(globio_path)
 invest_poll_s3 <- ebv_read(filepath = invest_path,
-                            datacubepath = 'scenario_3/metric_1/ebv_cube',
-                            entity = 1, type='r',
+                           datacubepath = 'scenario_3/metric_1/ebv_cube',
+                           entity = 1, type='r',
                            timestep=3)
 globio_poll_s3 <- ebv_read(filepath = globio_path,
-                             datacubepath = 'scenario_3/metric_2/ebv_cube',
-                             entity = 1, type='r')
+                           datacubepath = 'scenario_3/metric_2/ebv_cube',
+                           entity = 1, type='r')
 
 ssp5_poll <- c(invest_poll_s3, globio_poll_s3)
 ssp5_poll_mean <- app(ssp5_poll, mean, na.rm=T)
@@ -449,13 +449,13 @@ ssp5_poll_mean <- app(ssp5_poll, mean, na.rm=T)
 #----nitrogen (2): lpj-guess, invest
 ebv_datacubepaths(lpj_guess_path)
 invest_nitro_s3 <- ebv_read(filepath = invest_path,
-                           datacubepath = 'scenario_3/metric_2/ebv_cube',
-                           entity = 1, type='r',
-                           timestep=3)
+                            datacubepath = 'scenario_3/metric_2/ebv_cube',
+                            entity = 1, type='r',
+                            timestep=3)
 lpj_guess_nitro_s3 <- ebv_read(filepath = lpj_guess_path,
-                           datacubepath = 'scenario_3/metric_4/ebv_cube',
-                           entity = 1, type='r',
-                           timestep=3)
+                               datacubepath = 'scenario_3/metric_4/ebv_cube',
+                               entity = 1, type='r',
+                               timestep=3)
 #change signal of nitrogen export -> nitrogen retention
 invest_nitro_s3 <- invest_nitro_s3*-1
 lpj_guess_nitro_s3 <- lpj_guess_nitro_s3*-1
@@ -492,14 +492,14 @@ co <- c(co1,co2)
   box()
   title(main = expression("% decade"^{-1}), font.main = 1,cex.main=2, adj=0)
 }
-dev.copy(pdf,file.path(root_figures, 'FigureS14_legend.pdf'),
+dev.copy(pdf,file.path(root_figures, 'FigureS11_legend.pdf'),
          width=15,height=2.5)#width=20,height=1.7)
 dev.off()
 
 
 {
   par(mfrow = c(3, 2))
-
+  
   plot(mask, legend = F, main = '(a) Ecosystem Carbon',
        axes= F,
        col='grey93')
@@ -509,7 +509,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(b) Food and Feed Production',
        axes= F,
        col='grey93')
@@ -519,7 +519,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(c) Timber Production',
        axes= F,
        col='grey93')
@@ -529,7 +529,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(d) Crop pollination',
        axes= F,
        col='grey93')
@@ -539,7 +539,7 @@ dev.off()
        col = co,
        legend = F,
        axes= F)
-
+  
   plot(mask, legend = F, main = '(e) Nitrogen retention',
        axes= F,
        col='grey93')
@@ -552,7 +552,6 @@ dev.off()
 }
 
 #save as file
-dev.copy(pdf,file.path(root_figures, 'FigureS14_EcoServ_SSP5.pdf'),
+dev.copy(pdf,file.path(root_figures, 'FigureS11_EcoServ_SSP5.pdf'),
          width=13,height=10)
 dev.off()
-

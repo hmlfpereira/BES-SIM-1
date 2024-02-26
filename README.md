@@ -17,7 +17,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 ## Code folder
 | Filename   | Description  |
 | ---  | ---  |
-|Figure1_and_S3.R | Create input data and plots for global biodiversity metrics |
+|Figure1_and_S14.R | Create input data and plots for global biodiversity metrics |
 |Figure2.R   | Create BD maps (species richness) per scenario, averaged over several models |
 |Figure3.R   | Create input data and plots for global ecosystem service metrics |
 |Figure4.R   | Create Input data and Map with regional plots for ES and BD |
@@ -27,20 +27,23 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 |FigureS4.R  | Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario  |
 |FigureS5.R  | Create distribution maps of pasture and rangeland in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario |
 |FigureS6.R  | Create S2a: Global historical trends (1990-2015) in mean annual temperature and for each scenario (2015-2050) and create S2b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)| 
-|FigureS7.R  | Create BD maps (intactness) per scenario, averaged over several models | 
-|FigureS8.R  | Create BE maps (local species richness) per model for the regional rivalry scenario | 
-|FigureS9.R  | Create BE maps per scenario for the AIM model |
-|FigureS10-S14.R | Create ES maps per scenario, some per model, some averaged over several models |
+|FigureS7.R  | Create BD maps (species richness) per model for the regional rivalry scenario | 
+|FigureS8.R  | Create BD maps (intactness) per scenario, averaged over several models | 
+|FigureS9.R  | Create BD maps per scenario for the AIM model |
+|FigureS10-S13.R | Create ES maps per scenario, some per model, some averaged over several models |
+
+
 
 ### Auxiliary files 
-The files are here for documentation as the outputs are already stored in the files in Data_tables.
+The files are here for documentation as the spatial statistics from the maps are already stored in the files in Data_tables.
+
 | Filename   | Description     |
 | ---    | ---  |
 |BES-SIM_statistics_global.R | Calculate global statistics per IPBES region for all netCDFs|
 |BES-SIM_statistics_ipbes-regions.R | Calculate zonal statistics per IPBES region for all netCDFs|
 
 ## Data_tables folder 
-All tabular data from the biodiversity and ecosystem service model outputs are available. See README files on that folder for the metadata.
+All tabular data from the biodiversity and ecosystem service model outputs are available in this folder. These files also include the spatial statistics from the maps. See README files on that folder for the metadata.
 
 ## IPBES_regions folder
 A shapefile with the IPBES regions is available.
@@ -122,7 +125,7 @@ Session Info of the R- and package-version(s):
 	other attached packages:
 	 [1] gridExtra_2.3   raster_3.6-26   sp_2.1-3        readr_2.1.5     igraph_2.0.1.1  purrr_1.0.2     sf_1.0-15       rlang_1.1.3    
 	 [9] ggpattern_1.0.1 readxl_1.4.3    ggpubr_0.6.0    Rmisc_1.5.1     plyr_1.8.9      lattice_0.22-5  dplyr_1.1.4     ggplot2_3.4.4  
-	[17] classInt_0.4-10 terra_1.7-71    stringr_1.5.1   ebvcube_0.1.6  
+	[17] classInt_0.4-10 terra_1.7-71    stringr_1.5.1   ebvcube_0.1.7  
 
 	loaded via a namespace (and not attached):
 	 [1] gtable_0.3.4        rstatix_0.7.2       rJava_1.0-11        rhdf5_2.46.1        tzdb_0.4.0          rhdf5filters_1.14.1

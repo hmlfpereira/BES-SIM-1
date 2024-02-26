@@ -205,7 +205,7 @@ path <- paste(root_figures,"Figure1_BiodiversityMetrics.pdf",sep="")
 ggsave(file=path,plot_global  +
          guides(fill = guide_legend(reverse = TRUE)), width = 11.69, height = 11.27 * 2/3)
 
-#### b) Figure S7----
+#### b) Figure S14----
 # add plot of AIM zgamma by taxa
 # add plot of cSAR IIASA gamma by taxa
 data4 <- subset(data3, Family %in% c("Sgamma","Hgamma","Salpha"))
@@ -246,7 +246,7 @@ plot_global2<-ggplot(tgc3, aes(y=DecadalValue, x=Family, group = Scenario)) +
 
 print(plot_global2)  +
   guides(fill = guide_legend(reverse = TRUE))
-path <- paste(root_figures,"FigureS7_BiodiversityMetrics.pdf",sep="")
+path <- paste(root_figures,"FigureS14_BiodiversityMetrics.pdf",sep="")
 ggsave(file=path,plot_global2  +
          guides(fill = guide_legend(reverse = TRUE)), width = 11.69, height = 1/2 * 11.27)
 
