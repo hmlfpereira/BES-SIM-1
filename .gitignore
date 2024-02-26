@@ -1,6 +1,7 @@
 # Prevent users to commit their own .RProj
 *.Rproj
 *.Rhistory
+*.Rdata
 
 # Temporary files
 *~

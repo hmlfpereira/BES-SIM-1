@@ -8,7 +8,7 @@ Henrique M. Pereira, Luise Quoß, Inês Martins
 
 ## Version history
 Version 1.1, 26.4.2024  
-Update figure order and now uses color blind pallete for all figures.
+Updated figured order and now uses color blind pallete for all figures.
 
 Version 1.0, 25.4.2024  
 https://doi.org/10.5281/zenodo.10703117
@@ -59,7 +59,7 @@ Download the datasets from the EBV Data Portal:
 | ID  | Title | DOI |
 | ---    | ---  | ---  |
 |27 | Global trends in biodiversity (BES-SIM GLOBIO)| https://doi.org/10.25829/r7bt92 |
-|28 | Global trends in biodiversity (BES-SIM PREDICS)| https://doi.org/10.25829/vt7qk9 |
+|28 | Global trends in biodiversity (BES-SIM PREDICTS)| https://doi.org/10.25829/vt7qk9 |
 |29 | Global trends in biodiversity (BES-SIM cSAR-IIASA)| https://doi.org/10.25829/haq7d4 |
 |30 | Global trends in biodiversity (BES-SIM cSAR-iDiv)| https://doi.org/10.25829/5zmy41 |
 |31 | Global trends in biodiversity (BES-SIM AIM)| https://doi.org/10.25829/5wn357 |
