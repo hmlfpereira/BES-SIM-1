@@ -89,7 +89,7 @@ geomchange<-function(deltay,deltatime)
 
 #b<-c("#56B4E9","#009E73","#D55E00","#FCBF10")
 #b<-c("#56B4E9","#D55E00","#009E73","#FCBF10")
-b<-c("#F2C45F", "#B5520F","#00681C","#56B4E9")
+b<-rev(c("#F2C45F", "#B5520F","#00681C","#56B4E9"))
 
 ### 2 - Import data ----
 data_all<-read.csv(file.path(root_tables,"Biodiversity_global.csv"))

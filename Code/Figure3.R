@@ -182,7 +182,7 @@ unique(all_data$NCP)
 
 
 #b<-c("#56B4E9","#009E73","#D55E00","#FCBF10")
-b<-c("#F2C45F", "#B5520F","#00681C","#56B4E9")
+b<-rev(c("#F2C45F", "#B5520F","#00681C","#56B4E9"))
 
 P1<-ggplot() +       # Note that id is a factor. If x is numeric, there is some space between the first bar
   geom_hline(yintercept=0, color = "grey")+
