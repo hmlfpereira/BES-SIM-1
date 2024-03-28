@@ -158,7 +158,7 @@ levels(LU_data$Family)
 
 tgc$Family<-as.factor(tgc$Family)
 tgc$Family<-factor(tgc$Family,levels(tgc$Family)[c(2,1,3,4)]) 
-write.csv2(tgc,file.path(root_outputs,"Figure1_intermodel.csv"))
+write.csv(tgc,file.path(root_outputs,"Figure1_intermodel.csv"))
 
 # tgc$LUCC[tgc$LUCC=="LU"]<-"Land Use"
 # tgc$LUCC[tgc$LUCC=="LUCC"]<-"Land Use and Climate Change"

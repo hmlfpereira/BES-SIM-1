@@ -22,6 +22,7 @@
 Manuscript/
 Outputs/
 Figures/
+Verifications/
 
 #Files I don't want to sync
 data_geo-readme.txt
