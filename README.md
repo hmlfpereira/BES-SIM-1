@@ -7,7 +7,7 @@ This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Se
 Henrique M. Pereira, Luise Quoß, Inês Martins
 
 ## Version history
-Version 1.2 28.3.2023 
+Version 1.2 28.3.2023  
 Corrected historical value of Insights delta_H_gamma.
 
 Version 1.1, 26.4.2024  
