@@ -36,11 +36,22 @@ root_outputs<-"../Outputs/"
 #directory where other outputs and analysis will be saved
 
 #download data----
-predicts_path <- ebv_download('10.25829/vt7qk9', root)
-iiasa_path <- ebv_download('10.25829/haq7d4', root)
-csar_path <- ebv_download('10.25829/5zmy41', root)
-aim_path <- ebv_download('10.25829/5wn357', root)
-insight_path <- ebv_download('10.25829/h2evr2', root)
+for (id in c(27:31,68)) {
+  tryCatch({
+    ebv_download(id, root)
+  },error = function(e) {
+    if(stringr::str_detect(as.character(e),'NetCDF already downloaded'))
+      print(paste0('NetCDF with id ',id,' already downloaded'))
+  })
+}
+
+#list all files
+list.files(root, '*.nc')
+predicts_path <- file.path(root, 'pereira_comcom_id28_20231212_v2.nc')
+iiasa_path <- file.path(root, 'pereira_comcom_id29_20220323_v1.nc')
+csar_path <- file.path(root, 'pereira_comcom_id30_20220321_v1.nc')
+aim_path <- file.path(root, 'pereira_comcom_id31_20220321_v2.nc')
+insight_path <- file.path(root, 'pereira_comcom_id68_20231102_v1.nc' )
 
 ### 2 - Import data ----
 # ebv_datacubepaths(predicts_path)

@@ -37,11 +37,22 @@ root_outputs<-"../Outputs/"
 
 #directory where other outputs and analysis will be saved
 #download data----
-lpj_guess_path <- ebv_download('10.25829/z5v9t2', root)
-lpj_path <- ebv_download('10.25829/xq7a86', root)
-cable_path <- ebv_download('10.25829/ktnb68', root)
-invest_path <- ebv_download('10.25829/zr4d27', root)
-globio_path <- ebv_download('10.25829/vqd4s4', root)
+for (id in 60:64) {
+  tryCatch({
+    ebv_download(id, root)
+  },error = function(e) {
+    if(stringr::str_detect(as.character(e),'NetCDF already downloaded'))
+      print(paste0('NetCDF with id ',id,' already downloaded'))
+  })
+}
+
+#list all files
+list.files(root, '*.nc')
+lpj_guess_path <- file.path(root, 'pereira_ecoser_id60_20231204_v2.nc')
+lpj_path <- file.path(root, 'pereira_ecoser_id61_20231205_v2.nc')
+cable_path <- file.path(root, 'pereira_ecoser_id62_20231204_v2.nc')
+invest_path <- file.path(root, 'pereira_ecoser_id63_20231207_v2.nc')
+globio_path <- file.path(root, 'pereira_ecoser_id64_20231205_v2.nc')
 
 #generic function
 geomchange<-function(deltay,deltatime)
