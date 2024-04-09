@@ -36,16 +36,7 @@ root_outputs<-"../Outputs/"
 #directory where other outputs and analysis will be saved
 
 #download data
-for (id in 31) {
-  tryCatch({
-    ebv_download(id, root)
-  },error = function(e) {
-    if(stringr::str_detect(as.character(e),'NetCDF already downloaded'))
-      print(paste0('NetCDF with id ',id,' already downloaded'))
-  })
-}
-
-aim_path <- file.path(root, 'pereira_comcom_id31_20220321_v2.nc')
+aim_path <- ebv_download('10.25829/5wn357', root)
 
 ### 2 - Import data ----
 # ebv_datacubepaths(aim_path)

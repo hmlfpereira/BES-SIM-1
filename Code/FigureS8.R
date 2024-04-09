@@ -36,19 +36,8 @@ root_outputs<-"../Outputs/"
 #directory where other outputs and analysis will be saved
 
 #download data
-for (id in 27:28) {
-  tryCatch({
-    ebv_download(id, root)
-  },error = function(e) {
-    if(stringr::str_detect(as.character(e),'NetCDF already downloaded'))
-      print(paste0('NetCDF with id ',id,' already downloaded'))
-  })
-}
-
-#list all files
-#list.files(root, '*.nc')
-globio_path <- file.path(root, 'pereira_comcom_id27_20220405_v1.nc')
-predicts_path <- file.path(root, 'pereira_comcom_id28_20231212_v2.nc')
+globio_path <- ebv_download('10.25829/r7bt92', root)
+predicts_path <- ebv_download('10.25829/vt7qk9', root)
 
 ### 2 - Import data ----
 # ebv_datacubepaths(predicts_path)
