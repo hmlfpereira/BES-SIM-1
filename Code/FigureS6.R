@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Figure S6 ----
 ### Create S6a: Global historical trends (1990-2015) in mean annual temperature and for each scenario (2015-2050)
 ### Create S6b-e: Spatial distribution maps of absolute changes in mean annual temperature in each scenario (2015-2050)

@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Figure S4 ----
 ### Create distribution maps of cropland (C3 & C4) in 1900, historical changes (1900-2015) and future changes (2015-2050) in each scenario
 ### Project BES SIM 1

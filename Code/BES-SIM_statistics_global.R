@@ -1,8 +1,9 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Global statistics ----
 ### Calculate global statistics for all netCDFs
-#### Output 1: Values_IPBES-regions_raw-changes.xlsx - all models: mean, sum, median, area-weighted sum and area-weighted mean
-#### Output 2: Values_IPBES-regions_raw-changes.xlsx - ESS models only: mean, median, area-weighted mean and deltas of the sum of area-weighted sum
+#### Output 1: process_all.csv - all models: mean, sum, median, area-weighted sum and area-weighted mean
+#### Note that for % relative rows (e.g. 2015-2050) the sum and area-weighted sum are calculated from the absolute
+#### values for those years (when they exist), by first summing all cell values for each year, and then calculating the change
 ### Project BES SIM 1
 ### Created Nov 2023, Henrique Pereira
 ### Revised Dec 2023, Henrique Pereira
@@ -265,8 +266,6 @@ df4<-df3[!str_detect(df3$Units,"%") | df3$Years!="1900",]
 #write csv
 write.csv(df4,file.path(root_outputs,
                          "process_all.csv"), row.names = FALSE)
-write.csv2(df4,file.path(root_outputs,
-                        "process_all.csv2"), row.names = FALSE)
 
 
 

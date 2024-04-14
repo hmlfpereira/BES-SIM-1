@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Figure S1 ----
 ### Create global historical trends (1900-2015) in land-use and projected trends for each scenario (2015-2050)
 ### Project BES SIM 1

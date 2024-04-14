@@ -1,10 +1,10 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Figure 3 ----
 ### Create input data and plots for global ecosystem service metrics
 ### Project BES SIM 1
 ### Created September 2018, Ines S. Martins 
 ### Revised Nov 2023, Henrique Pereira
-### Revised Fen 2024, Henrique Pereira
+### Revised Feb 2024, Henrique Pereira
 
 ### 1 - Initializations ----
 # clear workspace

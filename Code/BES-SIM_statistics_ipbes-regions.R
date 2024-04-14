@@ -1,8 +1,9 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science.
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
 ### Zonal statistics ----
 ### Calculate zonal statistics per IPBES region for all netCDFs
 #### Output 1: Values_IPBES-regions_raw-changes.xlsx - all models: mean, sum, median, area-weighted sum and area-weighted mean
-#### Output 2: Values_IPBES-regions_delta-changes.xlsx - ESS models only: mean, median, area-weighted mean and deltas of the sum of area-weighted sum
+#### Output 2: Values_IPBES-regions_delta-changes.xlsx - ESS models only: sum and area-weighted sum are calculated from the absolute values
+####     for those years (when they exist), by first summing all cell values for each year, and then calculating the change
 ### Project BES SIM 1
 ### Created Dec 2023, Luise Quoß
 ### Revised Dec 2023, Henrique Pereira
