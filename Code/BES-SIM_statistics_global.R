@@ -269,50 +269,7 @@ write.csv2(df4,file.path(root_outputs,
                         "process_all.csv2"), row.names = FALSE)
 
 
-### Process GLOBIO-ES v3 ----
-file<-netcdfs_path[12] #"pereira_ecoser_id64_20240328_v3.nc"
-df5<-process_ebvcube(file)
-df5<-calc_delta_cube(df5)
-df5<-subset(df5, Scenario=="SSP1-RCP2.6" | Scenario=="SSP1xRCP2.6" | Scenario=="SSP1xRCP1.5" 
-            | Scenario =="SSP1-RCP1.5" | Years!="2015")
-df5<-subset(df5, Scenario=="SSP1-RCP2.6" | Scenario=="SSP1xRCP2.6" | Scenario=="SSP1xRCP1.5" 
-            | Scenario =="SSP1-RCP1.5" | Years!="1900")
-df6<-df5[!str_detect(df5$Units,"%") | df5$Years!="1900",]
-write.csv(df6,file.path(root_outputs,
-                         "globio-es-v3b.csv"), row.names = FALSE)
-
-globio_wood_s3 <- ebv_read(filepath =file,
-                           datacubepath = 'scenario_3/metric_6/ebv_cube',
-                           entity = 1, type='r',timestep=2)
-plot(globio_wood_s3,breaks=seq(-100,200,10))
-global(globio_wood_s3,median,na.rm=TRUE)
-
-globio_wood_s3_2015 <- ebv_read(filepath =file,
-                           datacubepath = 'scenario_3/metric_12/ebv_cube',
-                           entity = 1, type='r')
-
-globio_wood_s3_2050 <- ebv_read(filepath =file,
-                                datacubepath = 'scenario_3/metric_12/ebv_cube',
-                                entity = 1, type='r',time=2)
-plot((globio_wood_s3_2050 - globio_wood_s3_2015)/globio_wood_s3_2015*100,breaks=seq(-100,200,10))
-global((globio_wood_s3_2050 - globio_wood_s3_2015)/globio_wood_s3_2015*100,median,na.rm=TRUE)
 
 
-globio_wood_s2_2015 <- ebv_read(filepath =file,
-                                datacubepath = 'scenario_2/metric_12/ebv_cube',
-                                entity = 1, type='r')
 
-globio_wood_s2_2050 <- ebv_read(filepath =file,
-                                datacubepath = 'scenario_2/metric_12/ebv_cube',
-                                entity = 1, type='r',time=2)
-global((globio_wood_s2_2050 - globio_wood_s2_2015)/globio_wood_s2_2015*100,median,na.rm=TRUE)
-
-globio_wood_s1_2015 <- ebv_read(filepath =file,
-                                datacubepath = 'scenario_1/metric_12/ebv_cube',
-                                entity = 1, type='r')
-
-globio_wood_s1_2050 <- ebv_read(filepath =file,
-                                datacubepath = 'scenario_1/metric_12/ebv_cube',
-                                entity = 1, type='r',time=2)
-global((globio_wood_s1_2050 - globio_wood_s1_2015)/globio_wood_s1_2015*100,median,na.rm=TRUE)
 
