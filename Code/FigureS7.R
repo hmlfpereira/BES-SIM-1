@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/10.1126/science.adn3441
 ### Figures S7 ----
 ### Create BE maps (local species richness) per model for the regional rivalry scenario
 ### Project BES SIM 1

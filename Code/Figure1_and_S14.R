@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/10.1126/science.adn3441
 ### Figure 1 ----
 ### Create input data and plots for global biodiversity metrics
 ### Project BES SIM 1
@@ -209,13 +209,17 @@ ggsave(file=path,plot_global  +
 #### b) Figure S14----
 # add plot of AIM zgamma by taxa
 # add plot of cSAR IIASA gamma by taxa
-data4 <- subset(data3, Family %in% c("Sgamma","Hgamma","Salpha"))
+data4 <- subset(data3,!Model=="cSAR-IIASA" | Taxa != "All") 
 data4 <- subset(data4,!Model=="AIM" | Taxa == "All" | str_detect(Metric, "no dispersal"))
-data4 <- subset(data4,!Model=="cSAR-IIASA" | Taxa != "All") 
+
 data4$Taxa[str_detect(data4$Metric,"full dispersal") & data4$Taxa=="All"] <- "All with full dispersal"
 tgc3<-subset(tgc,  Family %in% c("Hgamma","Salpha"))
+
 data4$Scenario <- factor(data4$Scenario, levels = c("Fossil fuel developm.","Regional rivalry",
                                                       "Global sustainability","Historical"))
+
+tgc3$Scenario<- factor(tgc3$Scenario, levels = c("Fossil fuel developm.","Regional rivalry",
+                                                 "Global sustainability","Historical"))
 
 plot_global2<-ggplot(tgc3, aes(y=DecadalValue, x=Family, group = Scenario)) +
   geom_col(aes(fill = Scenario), position = "dodge") +
@@ -251,6 +255,5 @@ path <- paste(root_figures,"FigureS14_BiodiversityMetrics.pdf",sep="")
 ggsave(file=path,plot_global2  +
          guides(fill = guide_legend(reverse = TRUE)), width = 11.69, height = 1/2 * 11.27)
 
-# calculate coeeficient of variation
-tgc2 <- na.omit(tgc) %>% mutate(cv=se/DecadalValue)
+
 

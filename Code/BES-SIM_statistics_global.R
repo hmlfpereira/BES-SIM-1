@@ -1,4 +1,4 @@
-### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/science.adn3441
+### Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900-2050. Science https://doi.org/10.1126/science.adn3441
 ### Global statistics ----
 ### Calculate global statistics for all netCDFs
 #### Output 1: process_all.csv - all models: mean, sum, median, area-weighted sum and area-weighted mean

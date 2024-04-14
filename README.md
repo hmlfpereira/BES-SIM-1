@@ -1,5 +1,5 @@
 # BES SIM 1
-This repository contains all scripts and data used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900 to 2050. Science. https://doi.org/science.adn3441**
+This repository contains all scripts and data used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900 to 2050. Science. https://doi.org/10.1126/science.adn3441**
 
 This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Services Scenario Inter-model Comparison).
 
@@ -51,7 +51,7 @@ The files are here for documentation as the spatial statistics from the maps are
 All tabular data from the biodiversity and ecosystem service model outputs are available in this folder. These files also include the spatial statistics from the maps. See README files on that folder for the metadata.
 
 ## IPBES_regions folder
-A shapefile with the IPBES regions is available.
+A shapefile with the IPBES sub-regions is available. The sub-regions are: Central Africa, East Africa and adjacent islands, North Africa, Southern Africa, West Africa, Caribbean, Mesoamerica, North America, South America, North-East Asia, Oceania, South-East Asia, South Asia, Western Asia, Central and Western Europe, Central Asia, Eastern Europe.
 
 ## Other spatial data
 The remaining data can be downloaded from the following repositories.
