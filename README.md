@@ -20,6 +20,9 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ## Code folder
+
+### Main files 
+Files to produce the different figures in the manuscript.
 | Filename   | Description  |
 | ---  | ---  |
 |Figure1_and_S14.R | Create input data and plots for global biodiversity metrics |
