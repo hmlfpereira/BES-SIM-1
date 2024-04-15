@@ -1,4 +1,5 @@
-# BES SIM 1
+# BES SIM 1  
+https://doi.org/10.5281/zenodo.10702963  
 This repository contains all scripts and data used for analysis and figures for the paper **Pereira et al. (2024). Global trends and scenarios for terrestrial biodiversity and ecosystem services from 1900 to 2050. Science. https://doi.org/10.1126/science.adn3441**
 
 This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Services Scenario Inter-model Comparison).
@@ -7,13 +8,16 @@ This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Se
 Henrique M. Pereira, Luise Quoß, Inês Martins, Isabel Rosa, HyeJin Kim
 
 ## Version history
+
 Version 1.2, 15.4.2024  
-Minor changes for cross-platform compatibility
+Minor changes for cross-platform compatibility  
+https://doi.org/10.5281/zenodo.10973423
 
 Version 1.1, 9.4.2024  
 Changed reference to downloading datasets from ID to DOI.  
 Corrected historical value of Insights delta_H_gamma.  
-Updated figured order and now uses color blind pallete for all figures.
+Updated figured order and now uses color blind pallete for all figures.  
+10.5281/zenodo.10971965
 
 Version 1.0, 25.3.2024  
 https://doi.org/10.5281/zenodo.10703117
