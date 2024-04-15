@@ -15,9 +15,11 @@ library(ebvcube)
 library(stringr)
 library(terra)
 library(classInt)
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("rhdf5")
+library(BiocManager)
+library(rhdf5)
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("rhdf5")
 
 #set paths
 
