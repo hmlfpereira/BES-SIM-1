@@ -60,7 +60,8 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
   # Rename the "mean" column    
   print(data)
   print(datac)
-  datac <- rename(datac, !!measurevar := mean)
+  #datac <- rename(datac, !!measurevar := mean)
+  datac <- rename(datac, c("mean" = measurevar))
   
   datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
   
