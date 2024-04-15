@@ -7,7 +7,7 @@ This paper is the result of the BES SIM 1 project (Biodiversity and Ecosystem Se
 Henrique M. Pereira, Luise Quoß, Inês Martins, Isabel Rosa, HyeJin Kim
 
 ## Version history
-Version 1.2, 15.4.2024 
+Version 1.2, 15.4.2024  
 Minor changes for cross-platform compatibility
 
 Version 1.1, 9.4.2024  
