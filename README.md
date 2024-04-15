@@ -60,7 +60,7 @@ A shapefile with the IPBES sub-regions is available. The sub-regions are: Centra
 The remaining data can be downloaded from the following repositories.
 
 ### Biodiversity and ecosystem services models map outputs 
-Download the datasets from the EBV Data Portal:
+Download the datasets from the EBV Data Portal (this can also be automatically done by running Figure2.R and FigureS10-S13.R):
 | ID  | Title | DOI |
 | ---    | ---  | ---  |
 |27 | Global trends in biodiversity (BES-SIM GLOBIO)| https://doi.org/10.25829/r7bt92 |
@@ -82,12 +82,15 @@ Data used for the historical maps: LUH2 v2h Release (10/14/16), file:
 - states.nc  
 
 Data used for the scenario maps: LUH2 v2f Release (12/21/17), files:  
-- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  
-- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  
-- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-AIM-ssp370-2-1-f_gn_2015-2100.nc  (states.nc for RCP2.6 SSP1)
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-IMAGE-ssp126-2-1-f_gn_2015-2100.nc  (states.nc for RCP7.0 SSP3)
+- multiple-states_input4MIPs_landState_ScenarioMIP_UofMD-MAGPIE-ssp585-2-1-f_gn_2015-2100.nc  (states.nc for RCP8.5 SSP5)
 
 ### Climate data
-Download the data from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6
+Download the following files from Dryad: https://doi.org/10.5061/dryad.3n5tb2rr6:
+- tas_bced_1960_1999_ipsl-cm5a-lr_hist_rcp2p6_1901-2099_noleap_monmean.nc
+- tas_bced_1960_1999_ipsl-cm5a-lr_hist_rcp6p0_1901-2099_noleap_monmean.nc
+- tas_bced_1960_1999_ipsl-cm5a-lr_hist_rcp8p5_1901-2099_noleap_monmean.nc
 
 ### Global land map
 Download 'Land' from NaturalEarth: https://www.naturalearthdata.com/downloads/110m-physical-vectors/  (ne_110m_land)

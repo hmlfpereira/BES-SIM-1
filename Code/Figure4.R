@@ -63,6 +63,7 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=TRUE,
   
   # Rename the "mean" column    
   datac <- rename(datac, !!measurevar := mean)
+  # alternatively datac <- rename(datac, c("mean" = measurevar))
   
   datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
   
@@ -219,7 +220,7 @@ map
 ssp<-c("SSP1","SSP3","SSP5")
 ssp2<-c("SSP1xRCP2.6","SSP3xRCP6.0","SSP5xRCP8.5")
 #b<-c("#D36027","#6F94CC","#059E73")
-b<-c('#CC79A7','#E69F00','#F0E442')
+b<-c('#2E757C','#6588B5','#8D4989')
 scales::show_col(b)
 
 #length(map.kt$IPBES_sub)

@@ -15,8 +15,11 @@ library(ebvcube)
 library(stringr)
 library(terra)
 library(classInt)
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("rhdf5")
 
-#set paths
+n#set paths
 
 #setting working directory to the current file source location 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  #only works R studio
@@ -381,7 +384,7 @@ plot(
   axes= F
 )
 
-#c) plot ssp2 lucc ----
+#f) plot ssp2 lucc ----
 screen(8)
 plot(mask, legend = F,
      main = '(f) Regional rivalry - LUCC',
@@ -397,7 +400,7 @@ plot(
   axes= F
 )
 
-#d) plot ssp3 lucc ----
+#g) plot ssp3 lucc ----
 screen(9)
 plot(mask, legend = F,
      main = '(g) Fossil-fueled develop. - LUCC',
@@ -440,16 +443,16 @@ intersect <- lapply(c(hist_mean,ssp1_lu_mean,ssp2_lu_mean,ssp3_lu_mean),
                     function(x) {areaweight_zonal_mean(x,regions)}) 
 df<-data.frame(as.data.frame(regions)$IPBES_sub,intersect)
 colnames(df)<-c("Region","Hist","SSP1", "SSP3", "SSP5")
-write.csv2(df,paste0(root_outputs,"RegionalDeltaSS_lu_total.csv"))
+write.csv(df,paste0(root_outputs,"RegionalDeltaSS_lu_total.csv"))
 
 intersect <- lapply(c(hist_mean_yrl,ssp1_lu_mean_yrl,ssp2_lu_mean_yrl,ssp3_lu_mean_yrl), 
                     function(x) {areaweight_zonal_mean(x,regions)}) 
 df<-data.frame(as.data.frame(regions)$IPBES_sub,intersect)
 colnames(df)<-c("Region","Hist","SSP1", "SSP3", "SSP5")
-write.csv2(df,paste0(root_outputs,"RegionalDeltaSS_lu_decadal.csv"))
+write.csv(df,paste0(root_outputs,"RegionalDeltaSS_lu_decadal.csv"))
 
 intersect <- lapply(c(hist_mean,ssp1_lucc_mean,ssp2_lucc_mean,ssp3_lucc_mean), 
                     function(x) {areaweight_zonal_mean(x,regions)}) 
 df<-data.frame(as.data.frame(regions)$IPBES_sub,intersect)
 colnames(df)<-c("Region","Hist","SSP1", "SSP3", "SSP5")
-write.csv2(df,paste0(root_outputs,"RegionalDeltaSS_lucc_total.csv"))
+write.csv(df,paste0(root_outputs,"RegionalDeltaSS_lucc_total.csv"))

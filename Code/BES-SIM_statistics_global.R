@@ -19,6 +19,9 @@ library(dplyr)
 library(ebvcube)
 library(terra)
 library(lubridate)
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("HDF5Array")
 
 #setting working directory to the current file source location 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  #only works R studio
